@@ -22,6 +22,7 @@
         android:textColor="@color/design_default_color_on_primary"
         android:textSize="48sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/mainFragmentIllustration"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,26 +34,27 @@
         android:layout_height="300dp"
         android:contentDescription="@string/paper_hand_description"
         android:src="@drawable/ic_paper_hand"
-        app:layout_constraintBottom_toTopOf="@+id/mainFragmentStartGameButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainFragmentTitle" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/mainFragmentStartGameButton"
         android:layout_width="0dp"
-        android:layout_height="55dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
-        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
         android:fontFamily="@font/roboto_light"
-        android:onClick="startGame"
         android:text="@string/start_button_label"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainFragmentIllustration" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

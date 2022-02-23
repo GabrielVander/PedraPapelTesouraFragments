@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="15dp"
+    tools:context=".ui.main.HandPickingFragment">
+
+    <ImageView
+        android:id="@+id/handPickingIllustration"
+        android:layout_width="1100dp"
+        android:layout_height="350dp"
+        android:contentDescription="@string/paper_hand_description"
+        android:rotation="180"
+        android:src="@drawable/ic_paper_hand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/handPickingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/hand_picking_title"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/handPickingIllustration" />
+
+    <TextView
+        android:id="@+id/handPickingSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="@string/hand_picking_sub_title"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/handPickingTitle" />
+
+    <ImageButton
+        android:id="@+id/handPickingRockButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/purple_500"
+        android:contentDescription="@string/rock_hand_description"
+        android:paddingHorizontal="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_rock"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/handPickingPaperButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/handPickingSubTitle" />
+
+    <ImageButton
+        android:id="@+id/handPickingPaperButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/purple_500"
+        android:contentDescription="@string/paper_hand_description"
+        android:padding="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_paper_hand"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/handPickingSubTitle" />
+
+    <ImageButton
+        android:id="@+id/handPickingScissorsButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/purple_500"
+        android:contentDescription="@string/scissors_hand_description"
+        android:padding="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_scissors"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/handPickingPaperButton"
+        app:layout_constraintTop_toBottomOf="@+id/handPickingSubTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
