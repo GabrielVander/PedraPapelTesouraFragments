@@ -1,6 +1,6 @@
 package vander.gabriel.pedrapapeltesourafragments.ui.main.domain
 
-enum class Hands {
+enum class Hand {
     ROCK,
     PAPER,
     SCISSORS

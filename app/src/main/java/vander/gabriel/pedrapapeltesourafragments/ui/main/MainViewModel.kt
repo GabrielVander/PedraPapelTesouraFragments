@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import vander.gabriel.pedrapapeltesourafragments.ui.main.domain.Game
 import vander.gabriel.pedrapapeltesourafragments.ui.main.domain.GameState
+import vander.gabriel.pedrapapeltesourafragments.ui.main.domain.Hand
 import vander.gabriel.pedrapapeltesourafragments.ui.main.domain.Player
 
 class MainViewModel : ViewModel() {
@@ -28,6 +29,12 @@ class MainViewModel : ViewModel() {
             state = GameState.SELECTING_HAND,
             numberOfPlayers = amount,
             aiPlayers = aiPlayers
+        )
+    }
+
+    fun setPlayerHand(hand: Hand) {
+        mutableGame.value = mutableGame.value?.copy(
+            playerHand = hand
         )
     }
 }
