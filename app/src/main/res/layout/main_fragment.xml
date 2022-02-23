@@ -33,13 +33,13 @@
         android:layout_height="334dp"
         android:contentDescription="@string/paper_hand_description"
         android:src="@drawable/ic_rock_paper_scissors___fragments___paper_hand"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/startGameButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homePageTitle" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/startGameButton"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="25dp"
@@ -47,6 +47,7 @@
         android:layout_marginBottom="52dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/roboto_light"
+        android:onClick="startGame"
         android:text="@string/start_button_label"
         android:textColor="@color/design_default_color_on_secondary"
         app:layout_constraintBottom_toBottomOf="parent"
