@@ -10,39 +10,52 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <ImageView
+        android:id="@+id/playerSelectionIllustration"
+        android:layout_width="175dp"
+        android:layout_height="235dp"
+        android:contentDescription="@string/paper_hand_description"
+        android:src="@drawable/ic_paper_hand"
+        app:layout_constraintBottom_toTopOf="@+id/playerSelectionTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        android:id="@+id/playerSelectionLabel"
+        android:id="@+id/playerSelectionTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="@string/player_selection_label"
+        android:text="@string/player_selection_title"
         android:textColor="@color/black"
         android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/playerSelectionSubTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="60dp"
         android:fontFamily="@font/roboto_thin"
         android:text="@string/player_selection_sub_title"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playerSelectionLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/playerSelectionTitle" />
 
     <Button
-        android:id="@+id/twoPlayersButton"
+        android:id="@+id/playerSelectionTwoPlayersButton"
         android:layout_width="100dp"
         android:layout_height="75dp"
         android:layout_marginStart="50dp"
-        android:background="@color/purple_700"
+        android:backgroundTint="@color/purple_500"
         android:enabled="true"
         android:fontFamily="@font/roboto"
         android:gravity="center"
@@ -56,11 +69,11 @@
         app:layout_constraintTop_toBottomOf="@+id/playerSelectionSubTitle" />
 
     <Button
-        android:id="@+id/twoPlayersButton2"
+        android:id="@+id/playerSelectionThreePlayersButton"
         android:layout_width="100dp"
         android:layout_height="75dp"
         android:layout_marginEnd="50dp"
-        android:background="@color/purple_700"
+        android:backgroundTint="@color/purple_500"
         android:enabled="true"
         android:fontFamily="@font/roboto"
         android:gravity="center"
@@ -73,17 +86,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playerSelectionSubTitle"
         app:layout_constraintVertical_bias="0.5" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="175dp"
-        android:layout_height="235dp"
-        android:layout_marginTop="50dp"
-        android:contentDescription="@string/paper_hand_description"
-        android:src="@drawable/ic_rock_paper_scissors___fragments___paper_hand"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
