@@ -35,13 +35,7 @@ class PlayRecyclerViewAdapter(
 
         holder.playerName.text = play.playerName
 
-        val handResource: Int = when (play.hand) {
-            Hand.ROCK -> R.drawable.ic_rock
-            Hand.PAPER -> R.drawable.ic_paper
-            Hand.SCISSORS -> R.drawable.ic_scissors
-        }
-
-        holder.handIllustration.setImageResource(handResource)
+        holder.handIllustration.setImageResource(play.hand.iconResourceId)
     }
 
     override fun getItemCount(): Int = values.size
