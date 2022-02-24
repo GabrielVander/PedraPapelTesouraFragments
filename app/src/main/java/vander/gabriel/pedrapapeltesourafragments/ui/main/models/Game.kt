@@ -1,4 +1,4 @@
-package vander.gabriel.pedrapapeltesourafragments.ui.main.domain
+package vander.gabriel.pedrapapeltesourafragments.ui.main.models
 
 data class Game(
     val state: GameState = GameState.NOT_INITIALIZED,

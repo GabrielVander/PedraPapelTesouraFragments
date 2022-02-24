@@ -5,10 +5,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import vander.gabriel.pedrapapeltesourafragments.R
 import vander.gabriel.pedrapapeltesourafragments.databinding.FragmentPlayBinding
-import vander.gabriel.pedrapapeltesourafragments.ui.main.domain.Hand
-import vander.gabriel.pedrapapeltesourafragments.ui.main.domain.Play
+import vander.gabriel.pedrapapeltesourafragments.ui.main.models.Play
 
 
 /**

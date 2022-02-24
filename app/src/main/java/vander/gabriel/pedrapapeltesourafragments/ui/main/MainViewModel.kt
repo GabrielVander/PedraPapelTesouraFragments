@@ -3,7 +3,7 @@ package vander.gabriel.pedrapapeltesourafragments.ui.main
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import vander.gabriel.pedrapapeltesourafragments.ui.main.domain.*
+import vander.gabriel.pedrapapeltesourafragments.ui.main.models.*
 import java.util.*
 
 class MainViewModel : ViewModel() {

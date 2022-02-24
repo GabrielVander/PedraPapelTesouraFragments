@@ -1,4 +1,4 @@
-package vander.gabriel.pedrapapeltesourafragments.ui.main.domain
+package vander.gabriel.pedrapapeltesourafragments.ui.main.models
 
 import vander.gabriel.pedrapapeltesourafragments.R
 

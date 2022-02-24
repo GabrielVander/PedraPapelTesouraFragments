@@ -1,13 +1,11 @@
 package vander.gabriel.pedrapapeltesourafragments
 
 import android.os.Bundle
-import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import vander.gabriel.pedrapapeltesourafragments.ui.main.*
-import vander.gabriel.pedrapapeltesourafragments.ui.main.domain.GameState
+import vander.gabriel.pedrapapeltesourafragments.ui.main.models.GameState
 
 class MainActivity : AppCompatActivity() {
 

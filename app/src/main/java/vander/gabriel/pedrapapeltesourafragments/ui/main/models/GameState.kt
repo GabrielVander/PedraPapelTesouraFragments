@@ -1,4 +1,4 @@
-package vander.gabriel.pedrapapeltesourafragments.ui.main.domain
+package vander.gabriel.pedrapapeltesourafragments.ui.main.models
 
 enum class GameState {
     NOT_INITIALIZED,
