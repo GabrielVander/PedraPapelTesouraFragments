@@ -88,4 +88,8 @@ class MainViewModel : ViewModel() {
             )
         }
     }
+
+    fun resetGame() {
+        mutableGame.value = Game()
+    }
 }

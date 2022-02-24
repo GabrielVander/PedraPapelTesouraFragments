@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -24,6 +25,13 @@ class ResultsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_results, container, false)
+
+        val exitButton: Button =
+            view.findViewById<View>(R.id.resultsExitButton) as Button
+
+        exitButton.setOnClickListener {
+            mainViewModel.resetGame()
+        }
 
         mainViewModel.game.observe(viewLifecycleOwner) { game ->
             val playerHandIllustration: ImageView =
