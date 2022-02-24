@@ -6,10 +6,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import vander.gabriel.pedrapapeltesourafragments.ui.main.HandPickingFragment
-import vander.gabriel.pedrapapeltesourafragments.ui.main.MainFragment
-import vander.gabriel.pedrapapeltesourafragments.ui.main.MainViewModel
-import vander.gabriel.pedrapapeltesourafragments.ui.main.PlayerSelectionFragment
+import vander.gabriel.pedrapapeltesourafragments.ui.main.*
 import vander.gabriel.pedrapapeltesourafragments.ui.main.domain.GameState
 
 class MainActivity : AppCompatActivity() {
@@ -33,16 +30,21 @@ class MainActivity : AppCompatActivity() {
                         supportFragmentManager
                             .beginTransaction()
                             .replace(R.id.container, PlayerSelectionFragment.newInstance())
-                            .addToBackStack("playerSelection")
                             .commit()
                     }
                     GameState.SELECTING_HAND -> {
                         supportFragmentManager
                             .beginTransaction()
                             .replace(R.id.container, HandPickingFragment.newInstance())
-                            .addToBackStack("handPicking")
                             .commit()
                     }
+                    GameState.DISPLAYING_RESULTS -> {
+                        supportFragmentManager
+                            .beginTransaction()
+                            .replace(R.id.container, ResultsFragment.newInstance())
+                            .commit()
+                    }
+                    else -> {}
                 }
             }
         }

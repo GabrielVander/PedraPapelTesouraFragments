@@ -32,7 +32,7 @@ class PlayerSelectionFragment : Fragment() {
         val threePlayersButton: Button =
             view.findViewById<View>(R.id.playerSelectionThreePlayersButton) as Button
         threePlayersButton.setOnClickListener {
-            mainViewModel.setPlayerAmount(2)
+            mainViewModel.setPlayerAmount(3)
         }
 
         return view

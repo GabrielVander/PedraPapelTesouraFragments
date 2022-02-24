@@ -3,10 +3,8 @@ package vander.gabriel.pedrapapeltesourafragments.ui.main
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import vander.gabriel.pedrapapeltesourafragments.ui.main.domain.Game
-import vander.gabriel.pedrapapeltesourafragments.ui.main.domain.GameState
-import vander.gabriel.pedrapapeltesourafragments.ui.main.domain.Hand
-import vander.gabriel.pedrapapeltesourafragments.ui.main.domain.Player
+import vander.gabriel.pedrapapeltesourafragments.ui.main.domain.*
+import java.util.*
 
 class MainViewModel : ViewModel() {
     private val mutableGame: MutableLiveData<Game> = MutableLiveData<Game>(Game())
@@ -19,9 +17,11 @@ class MainViewModel : ViewModel() {
     }
 
     fun setPlayerAmount(amount: Int) {
+        val amountOfAiPlayers = amount - 1
+
         val aiPlayers: MutableList<Player> = mutableListOf()
 
-        for (i in 0 until amount) {
+        for (i in 1..amountOfAiPlayers) {
             aiPlayers.add(Player("Computer #$i"))
         }
 
@@ -53,6 +53,17 @@ class MainViewModel : ViewModel() {
         mutableGame.value = game?.copy(
             state = GameState.DISPLAYING_RESULTS,
             aiPlayers = aiPlayers!!,
+            plays = getPlays(aiPlayers)
         )
+    }
+
+    private fun getPlays(aiPlayers: List<Player>): List<Play> {
+        return aiPlayers.map { player ->
+            Play(
+                id = UUID.randomUUID().toString(),
+                playerName = player.name,
+                hand = player.hand!!
+            )
+        }
     }
 }
