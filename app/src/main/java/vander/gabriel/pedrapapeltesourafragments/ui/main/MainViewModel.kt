@@ -34,7 +34,25 @@ class MainViewModel : ViewModel() {
 
     fun setPlayerHand(hand: Hand) {
         mutableGame.value = mutableGame.value?.copy(
+            state = GameState.CALCULATING_MOVES,
             playerHand = hand
+        )
+
+        calculateMoves()
+    }
+
+    private fun calculateMoves() {
+        val game: Game? = mutableGame.value
+
+        val aiPlayers: List<Player>? = game?.aiPlayers?.map { player ->
+            player.copy(
+                hand = Hand.values().toList().shuffled().first()
+            )
+        }
+
+        mutableGame.value = game?.copy(
+            state = GameState.DISPLAYING_RESULTS,
+            aiPlayers = aiPlayers!!,
         )
     }
 }
