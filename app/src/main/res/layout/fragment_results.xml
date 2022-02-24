@@ -7,11 +7,11 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:padding="15dp"
-    tools:context=".ui.main.ResultsFragment">
+    tools:context=".ui.main.fragments.ResultsFragment">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/resultsFragmentContainerView"
-        android:name="vander.gabriel.pedrapapeltesourafragments.ui.main.PlayFragment"
+        android:name="vander.gabriel.pedrapapeltesourafragments.ui.main.fragments.PlayFragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"

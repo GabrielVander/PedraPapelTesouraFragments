@@ -1,4 +1,4 @@
-package vander.gabriel.pedrapapeltesourafragments.ui.main
+package vander.gabriel.pedrapapeltesourafragments.ui.main.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import vander.gabriel.pedrapapeltesourafragments.R
+import vander.gabriel.pedrapapeltesourafragments.ui.main.view_models.MainViewModel
 import vander.gabriel.pedrapapeltesourafragments.ui.main.models.Hand
 
 class HandPickingFragment : Fragment() {

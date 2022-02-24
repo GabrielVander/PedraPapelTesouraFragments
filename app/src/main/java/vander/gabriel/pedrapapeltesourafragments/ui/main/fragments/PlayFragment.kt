@@ -1,4 +1,4 @@
-package vander.gabriel.pedrapapeltesourafragments.ui.main
+package vander.gabriel.pedrapapeltesourafragments.ui.main.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import vander.gabriel.pedrapapeltesourafragments.R
+import vander.gabriel.pedrapapeltesourafragments.ui.main.view_models.MainViewModel
+import vander.gabriel.pedrapapeltesourafragments.ui.main.adapters.PlayRecyclerViewAdapter
 
 class PlayFragment : Fragment() {
 

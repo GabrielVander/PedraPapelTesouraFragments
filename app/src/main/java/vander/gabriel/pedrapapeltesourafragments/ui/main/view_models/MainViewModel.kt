@@ -1,4 +1,4 @@
-package vander.gabriel.pedrapapeltesourafragments.ui.main
+package vander.gabriel.pedrapapeltesourafragments.ui.main.view_models
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -1,4 +1,4 @@
-package vander.gabriel.pedrapapeltesourafragments.ui.main
+package vander.gabriel.pedrapapeltesourafragments.ui.main.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
