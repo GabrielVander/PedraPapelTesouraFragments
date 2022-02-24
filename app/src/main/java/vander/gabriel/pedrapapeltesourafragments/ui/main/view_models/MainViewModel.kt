@@ -51,13 +51,35 @@ class MainViewModel : ViewModel() {
         }
 
         mutableGame.value = game?.copy(
-            state = GameState.DISPLAYING_RESULTS,
             aiPlayers = aiPlayers!!,
-            plays = getPlays(aiPlayers)
+            aiPlays = getAiPlays(aiPlayers)
+        )
+
+        calculateResult()
+    }
+
+    private fun calculateResult() {
+        val game: Game? = mutableGame.value
+
+        mutableGame.value = game?.copy(
+            state = GameState.DISPLAYING_RESULTS,
+            result = game.playerHand?.let { getResult(it, game.aiPlays) }
         )
     }
 
-    private fun getPlays(aiPlayers: List<Player>): List<Play> {
+    private fun getResult(playerHand: Hand, plays: List<Play>): Result {
+        val aiHands: List<Hand> = plays.map { play -> play.hand }
+
+        if (aiHands.all { hand -> hand.isCounteredBy(playerHand) }) {
+            return Result.PLAYER_WON
+        } else if (aiHands.any { hand -> hand.counters(playerHand) }) {
+            return Result.PLAYER_LOST
+        }
+
+        return Result.DRAW
+    }
+
+    private fun getAiPlays(aiPlayers: List<Player>): List<Play> {
         return aiPlayers.map { player ->
             Play(
                 id = UUID.randomUUID().toString(),

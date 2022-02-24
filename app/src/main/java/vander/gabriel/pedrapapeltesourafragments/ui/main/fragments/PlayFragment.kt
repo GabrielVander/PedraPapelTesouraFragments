@@ -35,7 +35,7 @@ class PlayFragment : Fragment() {
                         else -> GridLayoutManager(context, it.aiPlayers.size)
                     }
 
-                    adapter = PlayRecyclerViewAdapter(it.plays)
+                    adapter = PlayRecyclerViewAdapter(it.aiPlays)
                 }
 
             }

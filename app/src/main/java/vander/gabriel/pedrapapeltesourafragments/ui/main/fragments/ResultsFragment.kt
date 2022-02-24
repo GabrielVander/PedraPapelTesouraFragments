@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import vander.gabriel.pedrapapeltesourafragments.R
@@ -24,13 +25,18 @@ class ResultsFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_results, container, false)
 
-        mainViewModel.game.observe(viewLifecycleOwner) {
+        mainViewModel.game.observe(viewLifecycleOwner) { game ->
             val playerHandIllustration: ImageView =
                 view.findViewById<View>(R.id.resultsPlayerHandIllustration) as ImageView
 
-            it.playerHand?.let {
-                    it1 -> playerHandIllustration.setImageResource(it1.iconResourceId)
+            val resultDisplay: TextView =
+                view.findViewById<View>(R.id.resultsText) as TextView
+
+            game.playerHand?.let { hand ->
+                playerHandIllustration.setImageResource(hand.iconResourceId)
             }
+
+            game.result?.let { resultDisplay.setText(it.displayResourceId) }
         }
 
         return view

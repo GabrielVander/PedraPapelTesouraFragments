@@ -11,6 +11,8 @@
     <string name="hand_picking_title">Let\'s play!</string>
     <string name="hand_picking_sub_title">Pick an option</string>
     <string name="results_player_lost">You lost =(</string>
+    <string name="results_player_won">You won! =)</string>
+    <string name="results_draw">It\'s a draw =|</string>
     <string name="results_your_hand">Your hand</string>
     <string name="resultsPlayerHandIllustrationDescription">Player\'s hand</string>
     <string name="hand_result_default_player_name">Player name</string>

@@ -5,5 +5,6 @@ data class Game(
     val numberOfPlayers: Int = 2,
     val aiPlayers: List<Player> = listOf(),
     val playerHand: Hand? = null,
-    val plays: List<Play> = listOf(),
+    val aiPlays: List<Play> = listOf(),
+    val result: Result? = null
 )
