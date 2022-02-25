@@ -1,10 +1,13 @@
 package vander.gabriel.pedrapapeltesourafragments.ui.main
 
 import android.os.Bundle
+import android.view.View
+import android.widget.FrameLayout
 import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import vander.gabriel.pedrapapeltesourafragments.R
+import vander.gabriel.pedrapapeltesourafragments.databinding.MainActivityBinding
 import vander.gabriel.pedrapapeltesourafragments.ui.main.fragments.HandPickingFragment
 import vander.gabriel.pedrapapeltesourafragments.ui.main.fragments.MainFragment
 import vander.gabriel.pedrapapeltesourafragments.ui.main.fragments.PlayerSelectionFragment
@@ -14,13 +17,19 @@ import vander.gabriel.pedrapapeltesourafragments.ui.main.view_models.MainViewMod
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding: MainActivityBinding
+
     private val mainViewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = MainActivityBinding.inflate(layoutInflater)
+
+        val view: FrameLayout = binding.root
         val actionBar: ActionBar? = supportActionBar
         actionBar?.hide()
-        setContentView(R.layout.main_activity)
+        setContentView(view)
+
         if (savedInstanceState == null) {
             mainViewModel.game.observe(this) { game ->
                 when (game.state) {
@@ -47,7 +56,9 @@ class MainActivity : AppCompatActivity() {
                             .replace(R.id.container, ResultsFragment.newInstance())
                             .commit()
                     }
-                    else -> {}
+                    else -> {
+                        // DO NOTHING
+                    }
                 }
             }
         }
