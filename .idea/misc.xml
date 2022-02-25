@@ -3,7 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Projects/PedraPapelTesouraFragments/app/src/main/res/drawable/ic_paper.xml" value="0.3115" />
+        <entry key="..\:/Projects/PedraPapelTesouraFragments/app/src/main/res/drawable/ic_rock_paper_scissors___fragments___paper_hand.xml" value="0.5" />
+        <entry key="..\:/Projects/PedraPapelTesouraFragments/app/src/main/res/layout/fragment_hand_picking.xml" value="0.35052083333333334" />
+        <entry key="..\:/Projects/PedraPapelTesouraFragments/app/src/main/res/layout/fragment_play.xml" value="0.33" />
+        <entry key="..\:/Projects/PedraPapelTesouraFragments/app/src/main/res/layout/fragment_play_list.xml" value="0.33" />
+        <entry key="..\:/Projects/PedraPapelTesouraFragments/app/src/main/res/layout/fragment_player_selection.xml" value="0.33" />
+        <entry key="..\:/Projects/PedraPapelTesouraFragments/app/src/main/res/layout/fragment_results.xml" value="0.33" />
+        <entry key="..\:/Projects/PedraPapelTesouraFragments/app/src/main/res/layout/layout_hand_result.xml" value="0.5" />
+        <entry key="..\:/Projects/PedraPapelTesouraFragments/app/src/main/res/layout/main_activity.xml" value="0.35052083333333334" />
         <entry key="..\:/Projects/PedraPapelTesouraFragments/app/src/main/res/layout/main_fragment.xml" value="0.35052083333333334" />
+        <entry key="..\:/Projects/PedraPapelTesouraFragments/app/src/main/res/layout/sample_hand_result.xml" value="0.67" />
       </map>
     </option>
   </component>
@@ -12,5 +22,8 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="TaskProjectConfiguration">
+    <server type="GitHub" url="https://github.com" />
   </component>
 </project>

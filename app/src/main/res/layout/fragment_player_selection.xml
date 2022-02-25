@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/playerSelectionConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.main.fragments.PlayerSelectionFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/playerSelectionIllustration"
+        android:layout_width="175dp"
+        android:layout_height="235dp"
+        android:contentDescription="@string/paper_hand_description"
+        android:src="@drawable/ic_paper"
+        app:layout_constraintBottom_toTopOf="@+id/playerSelectionTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/playerSelectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/player_selection_title"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/playerSelectionSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/roboto_thin"
+        android:text="@string/player_selection_sub_title"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerSelectionTitle" />
+
+    <Button
+        android:id="@+id/playerSelectionTwoPlayersButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="50dp"
+        android:backgroundTint="@color/purple_500"
+        android:enabled="true"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/two_players_button"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerSelectionSubTitle" />
+
+    <Button
+        android:id="@+id/playerSelectionThreePlayersButton"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="@color/purple_500"
+        android:enabled="true"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/three_players_button"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerSelectionSubTitle"
+        app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
