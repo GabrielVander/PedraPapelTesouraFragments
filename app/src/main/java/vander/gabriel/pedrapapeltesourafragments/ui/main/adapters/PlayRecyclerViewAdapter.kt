@@ -32,7 +32,6 @@ class PlayRecyclerViewAdapter(
         val play: Play = values[position]
 
         holder.playerName.text = play.playerName
-
         holder.handIllustration.setImageResource(play.hand.iconResourceId)
     }
 
