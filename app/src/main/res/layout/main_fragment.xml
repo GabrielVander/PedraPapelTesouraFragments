@@ -2,13 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/mainConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/design_default_color_primary"
+    android:background="@color/purple_500"
     android:padding="32dp"
     android:theme="@style/Theme.Main"
-    tools:context=".ui.main.MainFragment">
+    tools:context=".ui.main.fragments.MainFragment">
 
     <TextView
         android:id="@+id/mainFragmentTitle"
@@ -33,7 +33,7 @@
         android:layout_width="250dp"
         android:layout_height="300dp"
         android:contentDescription="@string/paper_hand_description"
-        android:src="@drawable/ic_paper_hand"
+        android:src="@drawable/ic_paper"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
