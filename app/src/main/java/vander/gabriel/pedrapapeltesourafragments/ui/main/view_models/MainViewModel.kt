@@ -63,20 +63,29 @@ class MainViewModel : ViewModel() {
 
         mutableGame.value = game?.copy(
             state = GameState.DISPLAYING_RESULTS,
-            result = game.playerHand?.let { getResult(it, game.aiPlays) }
+            result = game.playerHand?.let { getResult(it, game.aiPlayers) }
         )
     }
 
-    private fun getResult(playerHand: Hand, plays: List<Play>): Result {
-        val aiHands: List<Hand> = plays.map { play -> play.hand }
+    private fun getResult(playerHand: Hand, aiPlayers: List<Player>): Result {
+        val allPlayers: List<Player> = aiPlayers + Player("Human", playerHand)
 
-        if (aiHands.all { hand -> hand.isCounteredBy(playerHand) }) {
-            return Result.PLAYER_WON
-        } else if (aiHands.any { hand -> hand.counters(playerHand) }) {
-            return Result.PLAYER_LOST
+        val winner: Player = getWinner(allPlayers) ?: return Result.DRAW
+
+        return if (winner.name == "Human") Result.PLAYER_WON
+        else Result.PLAYER_LOST
+    }
+
+    private fun getWinner(players: List<Player>): Player? {
+        players.forEach { targetPlayer ->
+            val opponents = players.filter { player -> player != targetPlayer }
+
+            val playerCountersOpponents = opponents
+                .all { opponent -> opponent.hand!!.isCounteredBy(targetPlayer.hand!!) }
+            if (playerCountersOpponents) return targetPlayer
         }
 
-        return Result.DRAW
+        return null
     }
 
     private fun getAiPlays(aiPlayers: List<Player>): List<Play> {

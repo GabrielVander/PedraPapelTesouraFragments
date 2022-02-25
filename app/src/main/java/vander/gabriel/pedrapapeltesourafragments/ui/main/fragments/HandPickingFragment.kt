@@ -8,8 +8,8 @@ import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import vander.gabriel.pedrapapeltesourafragments.R
-import vander.gabriel.pedrapapeltesourafragments.ui.main.view_models.MainViewModel
 import vander.gabriel.pedrapapeltesourafragments.ui.main.models.Hand
+import vander.gabriel.pedrapapeltesourafragments.ui.main.view_models.MainViewModel
 
 class HandPickingFragment : Fragment() {
 

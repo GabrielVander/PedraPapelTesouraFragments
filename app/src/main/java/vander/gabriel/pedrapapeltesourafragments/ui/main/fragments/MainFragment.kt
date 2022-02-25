@@ -25,7 +25,8 @@ class MainFragment : Fragment() {
     ): View {
         val view = inflater.inflate(R.layout.main_fragment, container, false)
 
-        val startGameButton: Button = view.findViewById<View>(R.id.mainFragmentStartGameButton) as Button
+        val startGameButton: Button =
+            view.findViewById<View>(R.id.mainFragmentStartGameButton) as Button
         startGameButton.setOnClickListener {
             mainViewModel.startGame()
         }

@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import vander.gabriel.pedrapapeltesourafragments.R
-import vander.gabriel.pedrapapeltesourafragments.ui.main.view_models.MainViewModel
 import vander.gabriel.pedrapapeltesourafragments.ui.main.adapters.PlayRecyclerViewAdapter
+import vander.gabriel.pedrapapeltesourafragments.ui.main.view_models.MainViewModel
 
 class PlayFragment : Fragment() {
 
@@ -41,11 +41,5 @@ class PlayFragment : Fragment() {
             }
         }
         return view
-    }
-
-    companion object {
-
-        @JvmStatic
-        fun newInstance() = PlayFragment()
     }
 }
