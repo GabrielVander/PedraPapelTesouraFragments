@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/purple_500"
     android:padding="32dp"
-    android:theme="@style/Theme.Main"
+    android:theme="@style/Theme.PedraPapelTesouraFragments"
     tools:context=".ui.main.fragments.MainFragment">
 
     <TextView
